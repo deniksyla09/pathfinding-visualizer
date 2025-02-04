@@ -15,7 +15,7 @@ const createRow = (row: number, startTile: TileType, endTile: TileType) => {
             distance: Infinity,
             isStart: row === startTile.row && col === startTile.col,
             isTraversed: false, 
-            parent: null
+            parent: null,
         });
     }
     return currentRow;
@@ -24,7 +24,7 @@ const createRow = (row: number, startTile: TileType, endTile: TileType) => {
 export const createGrid = (startTile: TileType, endTile: TileType) => {
     const grid: GridType = [];
     for (let row = 0; row < MAX_ROWS; row++) {
-        grid.push(createRow(row, startTile, endTile))
+        grid.push(createRow(row, startTile, endTile));
     }
     return grid;
 };

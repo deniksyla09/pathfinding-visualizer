@@ -10,7 +10,7 @@ export const START_TILE_CONFIGURATION = {
     distance: 0,
     isStart: false,
     isTraversed: false,
-    parent: null
+    parent: null,
 }
 
 export const END_TILE_CONFIGURATION = {
@@ -22,5 +22,5 @@ export const END_TILE_CONFIGURATION = {
     distance: 0,
     isStart: false,
     isTraversed: false,
-    parent: null
+    parent: null,
 };

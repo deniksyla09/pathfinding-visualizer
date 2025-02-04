@@ -2,7 +2,7 @@ import { useContext } from "react"
 import { TileContext } from "../context/TileContext"
 
 
-export const useTile= () => {
+export const useTile = () => {
     const context = useContext(TileContext);
 
     if (!context) {
@@ -10,4 +10,4 @@ export const useTile= () => {
     }
 
     return context;
-}
+};
