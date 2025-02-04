@@ -28,7 +28,7 @@ export function Tile({
 
     let tileTyleStyle;
 
-    if(isStart) {
+    if (isStart) {
         tileTyleStyle = START_TILE_STYLE;
     } else if (isEnd) {
         tileTyleStyle = END_TILE_STYLE;
