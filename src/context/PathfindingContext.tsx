@@ -4,7 +4,7 @@ import { AlgorithmType, MazeType, GridType } from "../utils/types";
 import { createContext, ReactNode, useState } from "react";
 
 interface PathfindingContextInterface {
-    algorithm: AlgotithmType;
+    algorithm: AlgorithmType;
     setAlgorithm: (algorithm: AlgorithmType) => void; 
     maze: MazeType;
     setMaze: (maze: MazeType) => void;

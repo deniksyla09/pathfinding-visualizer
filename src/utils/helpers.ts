@@ -1,6 +1,6 @@
 //small functions used throughout the application
 
-import { MAX_ROWS } from "./constants";
+import { MAX_COLS, MAX_ROWS } from "./constants";
 import { GridType, TileType } from "./types";
 
 const createRow = (row: number, startTile: TileType, endTile: TileType) => {
