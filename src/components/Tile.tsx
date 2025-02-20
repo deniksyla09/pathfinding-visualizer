@@ -46,7 +46,6 @@ export function Tile({
     const edgeStyle = row === MAX_ROWS-1 && col === 0 ? "border-l" : "";
 
     return(
-
         <div className={twMerge(tileTyleStyle, borderStyle, edgeStyle)} id={`${row}-${col}`} />
     );
 }
