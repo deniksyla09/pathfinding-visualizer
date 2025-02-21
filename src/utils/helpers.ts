@@ -1,5 +1,3 @@
-//small functions used throughout the application
-
 import { MAX_COLS, MAX_ROWS } from "./constants";
 import { GridType, TileType } from "./types";
 

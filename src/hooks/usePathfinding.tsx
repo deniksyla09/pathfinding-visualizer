@@ -1,5 +1,5 @@
-import { useContext } from "react"
-import { PathfindingContext } from "../context/PathfindingContext"
+import { useContext } from "react";
+import { PathfindingContext } from "../context/PathfindingContext";
 
 export const usePathfinding = () => {
     const context = useContext(PathfindingContext)
@@ -9,7 +9,7 @@ export const usePathfinding = () => {
     }
 
     return context;
-}
+};
 
 //custom react hook that provides easy access to pathfinding context
 //this ensures that the hook is used within the pathfinding provider 
