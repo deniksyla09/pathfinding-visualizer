@@ -31,7 +31,7 @@ export const createGrid = (startTile: TileType, endTile: TileType) => {
 //and with each row push the row which containes the columns
 //which have the tiles in their initial state
 
-export const checkIfStartOrEnd = (row: number, col: number, endTile: TileType) => {
+export const checkIfStartOrEnd = (row: number, col: number) => {
     return (
         (row === 1 && col === 1) || (row === MAX_ROWS - 2 && col === MAX_COLS - 2)
     );
