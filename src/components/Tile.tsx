@@ -8,6 +8,10 @@ import {
     WALL_TILE_STYLE } from "../utils/constants";
 import { MAX_ROWS } from "../utils/constants";
 
+interface MouseFunction {
+    (row: number, col: number): void;
+}
+
 export function Tile({
     row,
     col,
@@ -16,6 +20,9 @@ export function Tile({
     isTraversed,
     isWall,
     isPath,
+    handleMopuseDown,
+    handleMouseUp,
+    handleMouseEnter,
 }:{
     row: number;
     col: number;
@@ -24,6 +31,9 @@ export function Tile({
     isTraversed: boolean;
     isWall: boolean;
     isPath: boolean;
+    handleMopuseDown: MouseFunction;
+    handleMouseUp: MouseFunction;
+    handleMouseEnter: MouseFunction;
 }) {
 
     let tileTyleStyle;
@@ -46,6 +56,12 @@ export function Tile({
     const edgeStyle = row === MAX_ROWS-1 && col === 0 ? "border-l" : "";
 
     return(
-        <div className={twMerge(tileTyleStyle, borderStyle, edgeStyle)} id={`${row}-${col}`} />
+        <div 
+        className={twMerge(tileTyleStyle, borderStyle, edgeStyle)} 
+        id={`${row}-${col}`} 
+        onMouseDown={() => handleMopuseDown(row,col)}
+        onMouseUp={() => handleMouseUp(row, col)}
+        onMouseEnter={() => handleMouseEnter(row,col)}
+        />
     );
 }

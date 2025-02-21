@@ -30,3 +30,20 @@ export const createGrid = (startTile: TileType, endTile: TileType) => {
 //We create our grid by mapping over all of the rows 
 //and with each row push the row which containes the columns
 //which have the tiles in their initial state
+
+export const checkIfStartOrEnd = (row: number, col: number, endTile: TileType) => {
+    return (
+        (row === 1 && col === 1) || (row === MAX_ROWS - 2 && col === MAX_COLS - 2)
+    );
+};
+
+export const createNewGrid = (grid: GridType, row: number, col: number) => {
+    const newGrid = grid.slice();
+    const newTile = {
+        ...newGrid[row][col],
+        isWall: !newGrid[row][col].isWall,
+    };
+
+    newGrid[row][col] = newTile;
+    return newGrid;
+};
